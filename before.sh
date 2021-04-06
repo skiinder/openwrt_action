@@ -11,12 +11,14 @@
 #
 
 # Uncomment a feed source
-sed -i 's/^#\(.*helloworld\)/\1/' feeds.conf.default
+#sed -i 's/^#\(.*helloworld\)/\1/' feeds.conf.default
 #sed -i '/#src-git helloworld/asrc-git passwall https://github.com/xiaorouji/openwrt-passwall' ./feeds.conf.default
 cd package/lean/
 rm -rf luci-theme-argon
 rm -rf luci-app-jd-dailybonus
 git clone https://github.com/jerrykuku/luci-app-jd-dailybonus.git
 git clone -b 18.06 https://github.com/jerrykuku/luci-theme-argon.git
+git clone https://github.com/jerrykuku/lua-maxminddb.git
+git clone https://github.com/jerrykuku/luci-app-vssr.git
 # Add a feed source
 #sed -i '$a src-git lienol https://github.com/Lienol/openwrt-package' feeds.conf.default
