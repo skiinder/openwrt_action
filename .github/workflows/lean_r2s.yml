@@ -8,7 +8,7 @@
 # Description: Build OpenWrt using GitHub Actions
 #
 
-name: Build NanoPi-R2s
+name: Lean NanoPi-R2s
 
 on:
   repository_dispatch:
@@ -23,14 +23,14 @@ env:
   REPO_URL: https://github.com/coolsnowwolf/lede
   REPO_BRANCH: master
   FEEDS_CONF: feeds.conf.default
-  CONFIG_FILE: r2s.conf
-  DIY_P1_SH: before.sh
-  DIY_P2_SH: after.sh
+  CONFIG_FILE: lean/r2s.conf
+  DIY_P1_SH: lean/before.sh
+  DIY_P2_SH: lean/after.sh
   UPLOAD_BIN_DIR: false
   UPLOAD_FIRMWARE: true
   UPLOAD_COWTRANSFER: false
   UPLOAD_WETRANSFER: false
-  UPLOAD_RELEASE: true
+  UPLOAD_RELEASE: false
   TZ: Asia/Shanghai
 
 jobs:

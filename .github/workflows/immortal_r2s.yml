@@ -8,7 +8,7 @@
 # Description: Build OpenWrt using GitHub Actions
 #
 
-name: Build X86_64
+name: Immortal NanoPi-R2s
 
 on:
   repository_dispatch:
@@ -20,12 +20,12 @@ on:
         default: 'false'
 
 env:
-  REPO_URL: https://github.com/coolsnowwolf/lede
-  REPO_BRANCH: master
+  REPO_URL: https://github.com/immortalwrt/immortalwrt.git
+  REPO_BRANCH: openwrt-18.06-k5.4
   FEEDS_CONF: feeds.conf.default
-  CONFIG_FILE: x86_64.conf
-  DIY_P1_SH: before.sh
-  DIY_P2_SH: after.sh
+  CONFIG_FILE: immortal/r2s.conf
+  DIY_P1_SH: immortal/before.sh
+  DIY_P2_SH: immortal/after.sh
   UPLOAD_BIN_DIR: false
   UPLOAD_FIRMWARE: true
   UPLOAD_COWTRANSFER: false
